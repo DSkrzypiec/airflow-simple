@@ -1,0 +1,9 @@
+version: '3'
+services:
+  airflow:
+    build: .
+    command: ["./startup.sh"]
+    volumes:
+      - ./dags:/home/airflow/dags
+    ports:
+      - 8080:8080
